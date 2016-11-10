@@ -20,9 +20,6 @@
 	background-color: #666;
 	color: #fff;
 }
-#nav li:hover .second_menu{	/*鼠标经过li 触发二级菜单显示属性*/
-	display: block;
-}
 .second_menu{
 	position: absolute;
 	display: none;

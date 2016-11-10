@@ -5,6 +5,19 @@
 	<title>下拉菜单</title>
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="styles/nav.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		//  jQuery(document).ready(function(){
+		// })  等待document加载完毕只有才执行jquery代码
+		$(function(){
+    		 $(".navmenu").mouseover(function(){  
+				 $(this).children('ul').show();	 	 
+			 })
+    		 $(".navmenu").mouseout(function(){  
+				 $(this).children('ul').hide();	 	 
+			 })
+		})
+	</script>
 </head>
 <body>
 	<div id="nav">
@@ -15,13 +28,13 @@
 					<li><a href="#">jQuery</a></li>
 				</ul>
 			</li>
-			<li><a href="#">课程中心</a>
+			<li class="navmenu"><a href="#">课程中心</a>
 				<ul class="second_menu">
 					<li><a href="#">javaScritp</a></li>
 					<li><a href="#">jQuery</a></li>
 				</ul>
 			</li>
-			<li><a href="#">学习中心</a>
+			<li class="navmenu"><a href="#">学习中心</a>
 				<ul class="second_menu">
 					<li><a href="#">javaScritp</a></li>
 					<li><a href="#">jQuery</a></li>
