@@ -1,0 +1,36 @@
+#nav{
+	background-color: #eee;
+	width: 600px;
+	height: 40px;
+	margin: 0 auto;
+}
+#nav ul li{
+	float: left;	
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+#nav li a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 0 10px;
+}
+#nav li a:hover{
+	background-color: #666;
+	color: #fff;
+}
+#nav li:hover .second_menu{	/*鼠标经过li 触发二级菜单显示属性*/
+	display: block;
+}
+.second_menu{
+	position: absolute;
+	display: none;
+}
+.second_menu li{
+	width: 100%;
+	margin-top: 3px;
+	padding: 0 -10px;
+	float: none;
+	background-color: #eee;
+}
