@@ -5,11 +5,23 @@
 	<title>下拉菜单</title>
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="styles/nav.css">
+	<script src="./js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.top-nav li').mousemove(function(){
+				$(this).find('ul').slideDown('1000');
+			})
+			$('.top-nav li').mouseleave(function(){
+				$(this).find('ul').slideUp('1000');
+			})
+		})	
+	</script>
 </head>
 <body>
     <ul class="top-nav">
         <li><a href="#"><span class="note">慕课网首页 +</span></a>
             <ul>
+            	<span class="corner"></span>
                 <li><a href="#">前端课程</a>
                 </li>
                 <li><a href="#">手机开发</a>
@@ -20,6 +32,7 @@
         <li><a href="#">课程大厅</a> </li>
         <li><a href="#">学习中心 +</a>
             <ul>
+            <span class="corner"></span>
                 <li><a href="#">前端课程</a>
                 </li>
                 <li><a href="#">手机开发</a>

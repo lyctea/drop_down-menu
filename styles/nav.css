@@ -30,7 +30,7 @@ body{
 .top-nav  ul{
 	list-style: none;
 	display: none;
-	width: 80px;
+	width: 120px;
 	padding: 0;
 	position: absolute;		/*让一级菜单从文档流中脱离出来*/
 }	
@@ -38,4 +38,9 @@ body{
 	color: #3f240e;
 	display: block;
 	background: url(../images/slide-pannel_14.png) 0 0 repeat-x;;
+}
+.corner{
+	display: block;
+	height: 11px;
+	background: url(../images/bird.png)31px 0 no-repeat;
 }
