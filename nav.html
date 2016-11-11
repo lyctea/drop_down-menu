@@ -5,16 +5,36 @@
 	<title>下拉菜单</title>
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="styles/nav.css">
-	<script src="./js/jquery.js"></script>
 	<script>
-		$(document).ready(function(){
-			$('.top-nav li').mousemove(function(){
-				$(this).find('ul').slideDown('1000');
-			})
-			$('.top-nav li').mouseleave(function(){
-				$(this).find('ul').slideUp('1000');
-			})
-		})	
+	window.onload = function(){
+		var Lis = document.getElementsByTagName('li');
+		for (var i = 0; i < Lis.length; i++) {
+			Lis[i].onmouseover = function(){
+				var u = this.getElementsByTagName('ul')[0];
+				u.style.display = "block";
+				AddH(u.id);
+			}
+			Lis[i].onmouseleave = function(){
+				var u = this.getElementsByTagName('ul')[0];
+				u.style.display = "none";
+				AddH(u.id);
+			}
+		}
+	}
+//setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式
+		function AddH(id){
+			var ulList = document.getElementById(id);
+			var h = ulList.offsetHeight;
+			h++;
+			if (h<=42) {
+				ulList.style.height = h+'px';
+				setTimeout('AddH('+ id +')',10);  
+			}
+			
+		}
+		function SubH(id){
+			setTimeout();
+		}	
 	</script>
 </head>
 <body>
