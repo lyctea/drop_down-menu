@@ -3,7 +3,6 @@ body{
 	height: 100px;
 	margin: 0 auto;
 }
-
 .top-nav{
 	font-size: 12px;
 	font-weight: bold;
@@ -20,35 +19,23 @@ body{
 	background: #ddd;
 	color: #666;
 	display: block;
-	width: 80px;
+	width: 120px;
+	height: 34px;
+	line-height: 34px;
 	text-align: center;
 }
 .top-nav  li a:hover{
-	background: #900;
-	color: #fff;
+	background: url(../images/slide-pannel_14.png) 0 0 repeat-x;;
 }
 .top-nav  ul{
 	list-style: none;
 	display: none;
 	width: 80px;
 	padding: 0;
-	position: relative;
-}
-.top-nav li ul li ul{
-	position: absolute;
-	top: 0;
-	left: 80px;
-}
-
-/* 使用CSS设置鼠标移动到一级菜单时，二级菜单显示，三级菜单隐藏 */	
-.top-nav li:hover ul{
+	position: absolute;		/*让一级菜单从文档流中脱离出来*/
+}	
+.note{
+	color: #3f240e;
 	display: block;
-}
-.top-nav li:hover ul li ul{
-	display: none;
-}
-
-/* 使用CSS设置鼠标移动到二级菜单时，三级菜单显示 */   
-.top-nav li ul li:hover ul{
-	display: block;
+	background: url(../images/slide-pannel_14.png) 0 0 repeat-x;;
 }
