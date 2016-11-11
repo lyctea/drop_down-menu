@@ -5,22 +5,26 @@
 	<title>下拉菜单</title>
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="styles/nav.css">
-	<script>
-	window.onload = function(){
+	<script type="text/javascript">
+		window.onload = function(){
 		var Lis = document.getElementsByTagName('li');
-		for (var i = 0; i < Lis.length; i++) {
+		for (var i = 0; i < Lis.length; i++){
 			Lis[i].onmouseover = function(){
 				var u = this.getElementsByTagName('ul')[0];
-				u.style.display = "block";
-				AddH(u.id);
-			}
+				if (u != undefined) {
+					u.style.display = "block";
+					AddH(u.id);
+					}			
+				}  //绑定第一个事件
 			Lis[i].onmouseleave = function(){
 				var u = this.getElementsByTagName('ul')[0];
-				u.style.display = "none";
-				AddH(u.id);
-			}
-		}
-	}
+				if (u != undefined) {
+					u.style.display = "none";
+					SubH(u.id);
+					}
+		  		}
+		 	 } //循环绑定事件
+		} //文档加载时绑定事件
 //setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式
 		function AddH(id){
 			var ulList = document.getElementById(id);
@@ -29,8 +33,7 @@
 			if (h<=42) {
 				ulList.style.height = h+'px';
 				setTimeout('AddH('+ id +')',10);  
-			}
-			
+			}		
 		}
 		function SubH(id){
 			setTimeout();

@@ -33,8 +33,8 @@ body{
 	width: 120px;
 	padding: 0;
 	position: absolute;		/*让一级菜单从文档流中脱离出来*/
-	height: 0;
-	overflow: hidden;
+/*	height: 0;
+	overflow: hidden;*/
 }	
 .note{
 	color: #3f240e;
